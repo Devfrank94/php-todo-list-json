@@ -1,0 +1,93 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+.logo{
+  padding: 30px;
+}
+
+.logo img{
+  width: 300px;
+}
+
+.ins-data{
+  text-align: center;
+}
+
+.ins-data input, .ins-data button{
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  box-shadow:
+  2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+  12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+  22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+  41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+  100px 100px 80px rgba(0, 0, 0, 0.07);
+}
+
+.ins-data button{
+  background-color:#001533;
+  color: white;
+  cursor: pointer;
+}
+
+.ins-data input{
+  width: 400px;
+  margin-right: 10px;
+}
+
+.list li i{
+  color: #001533;
+}
+
+.list li i:hover{
+  color: red;
+}
+
+.list{
+  margin-top: 20px;
+}
+
+.list li{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 60px;
+  border-bottom: 1px solid #001533;
+  padding: 0 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.list li:hover{
+  background-color: #ebedee;
+}
+
+.list li.check span{
+  text-decoration: line-through 1px #001533;
+  color: #00E165;
+}
+
+.container h2{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.ins-data .mess-err{
+  color: red;
+  font-size: 20px;
+  padding-top: 20px;
+
+}
