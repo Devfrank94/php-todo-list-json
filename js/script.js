@@ -6,7 +6,7 @@ createApp({
     return{
       apiUrl: 'server.php',
       listTasks: [],
-      errorMsg:''
+      errorMsg:'',
     }
   },
 

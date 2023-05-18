@@ -22,7 +22,7 @@
 
   <div id="app">
     
-    <!-- <div class="logo">
+    <div class="logo">
       <img src="img/logo.png" alt="logo">
     </div>
 
@@ -36,11 +36,11 @@
 
     <div class="container">
 
-      <h2 v-if="tasks.length === 0">Non ci sono promemoria in lista &#128521;</h2>
+      <h2 v-if="listTasks.length === 0">Non ci sono promemoria in lista &#128521;</h2>
 
       <ul v-else class="list">
 
-        <li v-for="(task,index) in tasks" :class="{'check' : task.check}" @click="task.check = !task.check">
+        <li v-for="(task, index) in listTasks" :class="{'check' : task.check}" @click="task.check = !task.check">
 
           <span>{{task.text}}</span>
           <i @click.stop="remtsk(index)" class="fa-solid fa-trash fa-beat"></i>
@@ -51,7 +51,7 @@
 
 
 
-    </div> -->
+    </div>
 
 
 
