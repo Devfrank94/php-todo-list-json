@@ -7,6 +7,7 @@ createApp({
       apiUrl: 'server.php',
       listTasks: [],
       errorMsg:'',
+      newTask:''
     }
   },
 
@@ -17,37 +18,45 @@ methods:{
   getApi(){
     axios.get(this.apiUrl)
     .then(result => {
-      this.listTasks = result.data
+      this.listTasks = result.data;
       console.log(result.data);
     })
   },
 
   // Funzione Rimuovi task
 
-  // remtsk(index){
-  //   if(this.tasks[index].check){
-  //     this.tasks.splice(index,1)
-  //     this.errorMsg = '';
-  //   }else{
-  //     this.errorMsg = 'La task può essere eliminata solo se completata'
-  //   }
-  // },
+  remtsk(index){
+    // Creo oggetto formdata
+    const data = new FormData()
+    // aggiungo variabile all'oggetto
+    data.append('text', this.newTask);
+    data.append('check', false);
+    // chiamata axios
+    axios.post(this.apiUrl, data)
+    .then(result => {
+      this.newTask = '';
+      this.listTasks = result.data;
+      console.log(this.listTasks);
+    })
+  },
 
 
   // Funzione aggiungi Task
 
-  // addTsk(){
-  //   if(this.newTsk.length > 4){
-  //     const newTsk = {
-  //       text: this.newTsk,
-  //       check: false
-  //     }
-  //     this.tasks.unshift(newTsk);
-  //     this.newTsk = '';
-  //   }else{
-  //     this.errorMsg = 'Errore! Il testo deve contenere minimo 5 caratteri'
-  //   }
-  // },
+  addTsk(){
+    // Creo oggetto formdata
+    const data = new FormData()
+    // aggiungo variabile all'oggetto
+    data.append('text', this.newTask);
+    data.append('check', false);
+    // chiamata axios
+    axios.post(this.apiUrl, data)
+    .then(result => {
+      this.newTask = '';
+      this.listTasks = result.data;
+      console.log(this.listTasks);
+    })
+  },
 
 },
 

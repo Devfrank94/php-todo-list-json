@@ -27,7 +27,7 @@
     </div>
 
     <div class="ins-data">
-      <input v-model.trim="newTsk" @keyup.enter="addTsk" type="text" placeholder="Nuovo Promemoria">
+      <input v-model.trim="newTask" @keyup.enter="addTsk" type="text" placeholder="Nuovo Promemoria">
       <button @click="addTsk">Aggiungi</button>
 
         <div class="mess-err">{{errorMsg}}</div>
@@ -40,7 +40,7 @@
 
       <ul v-else class="list">
 
-        <li v-for="(task, index) in listTasks" :class="{'check' : !task.check}" @click="task.check = !task.check">
+        <li v-for="(task, index) in listTasks" :key="index" :class="{'check' : task.check}" @click="task.check = !task.check">
 
           <span>{{task.text}}</span>
           <i @click.stop="remtsk(index)" class="fa-solid fa-trash fa-beat"></i>
