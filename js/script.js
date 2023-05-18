@@ -29,14 +29,12 @@ methods:{
     // Creo oggetto formdata
     const data = new FormData()
     // aggiungo variabile all'oggetto
-    data.append('text', this.newTask);
-    data.append('check', false);
+    data.append('delIndex', index);
     // chiamata axios
     axios.post(this.apiUrl, data)
     .then(result => {
-      this.newTask = '';
       this.listTasks = result.data;
-      console.log(this.listTasks);
+      console.warn(this.listTasks);
     })
   },
 
