@@ -22,7 +22,7 @@
 
   <div id="app">
     
-    <div class="logo">
+    <!-- <div class="logo">
       <img src="img/logo.png" alt="logo">
     </div>
 
@@ -51,7 +51,7 @@
 
 
 
-    </div>
+    </div> -->
 
 
 

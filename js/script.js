@@ -4,13 +4,23 @@ createApp({
 
   data(){
     return{
-
+      apiUrl: 'server.php',
+      listTasks: [],
       errorMsg:''
     }
   },
 
 
 methods:{
+
+  // 
+  getApi(){
+    axios.get(this.apiUrl)
+    .then(result => {
+      this.listTasks = result.data
+      console.log(result.data);
+    })
+  },
 
   // Funzione Rimuovi task
 
@@ -39,11 +49,11 @@ methods:{
   //   }
   // },
 
-
-
-
-
 },
+
+mounted(){
+  this.getApi();
+}
 
 
 }).mount("#app")
