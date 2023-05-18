@@ -18,6 +18,5 @@ $tasks = [
   
   $json_string = json_encode($tasks);
   file_put_contents('json-tasks.json', $json_string);
-  var_dump($json_string);
 
 ?>
