@@ -40,7 +40,7 @@
 
       <ul v-else class="list">
 
-        <li v-for="(task, index) in listTasks" :class="{'check' : task.check}" @click="task.check = !task.check">
+        <li v-for="(task, index) in listTasks" :class="{'check' : !task.check}" @click="task.check = !task.check">
 
           <span>{{task.text}}</span>
           <i @click.stop="remtsk(index)" class="fa-solid fa-trash fa-beat"></i>
